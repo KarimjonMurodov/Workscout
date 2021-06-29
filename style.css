@@ -25,3 +25,8 @@
     display: flex;
     justify-content: space-around;
 }
+
+.nav__menu ul li, .nav__login ul li{
+    list-style: none;
+    display: flex;
+}
