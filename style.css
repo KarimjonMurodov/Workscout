@@ -2,9 +2,9 @@
 
 
 :root{
-    --maincolor: #57ba2b;
-    --bgcolor: #aaaaaa;
-    --footercolor: #202020;
+    --mainColor: #57ba2b;
+    --bgColor: #aaaaaa;
+    --footerColor: #202020;
     --font: 'Poppins', sans-serif;
 }
 
@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font);
 }
 
 .container{
@@ -21,12 +22,107 @@
 
 .nav{
     width: 100%;
-    height: 30px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
+    /* background-color: brown; */
+    align-items: center;
+    font-weight: 500;
 }
 
-.nav__menu ul li, .nav__login ul li{
+.nav__logo h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.nav__menu, .nav__login{
     list-style: none;
     display: flex;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav__menu li{
+    margin: 0 15px;
+    padding: 6px 12px;
+    justify-content: start;
+}
+
+.nav__menu i{
+    margin-left: 8px;
+}
+
+.nav__login li{
+    margin: 0 10px;
+    padding: 6px 12px;
+}
+
+.nav__login i{
+    margin-right: 8px;
+}
+
+.nav__menu li:hover{
+    background-color: var(--mainColor);
+    color: white;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.nav__menu li:hover a{
+    color: white;
+    transition: all .3s;
+}
+
+.nav__login li:hover{
+    background-color: var(--mainColor);
+    color: white;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.nav__login li:hover a{
+    color: white;
+}
+
+
+.search{
+    width: 100%;
+    height: 700px;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+.search__box{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.search__title{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.search__inputs{
+    display: flex;
+}
+
+.search__input{
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 300px;
+}
+
+.search__input input{
+    flex: 1;
+}
+
+
